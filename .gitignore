@@ -1,0 +1,58 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Python cache / packaging
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.installed.cfg
+*.tmp
+
+# Virtual environments / local settings
+.env
+.env.*
+.envrc
+.venv/
+venv/
+ENV/
+
+# Logs and run outputs
+*.log
+*.out
+*.err
+logs/
+
+# Data, results, and model artifacts
+data/
+results/
+models/
+
+# Checkpoints / weights / artifacts
+*.bin
+*.ckpt
+*.ckpt.*
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.h5
+
+# Experiment trackers and caches
+wandb/
+mlruns/
+huggingface/
+.cache/
+.output/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
