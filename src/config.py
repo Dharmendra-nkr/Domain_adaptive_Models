@@ -8,7 +8,10 @@ class ExperimentConfig:
     model_names: List[str] = (
         "bert-base-uncased",
         "roberta-base",
-        "microsoft/deberta-base",
+        "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+        "allenai/scibert_scivocab_uncased",
+        "google/electra-base-discriminator",
+        "xlnet-base-cased",
     )
 
     # Dataset

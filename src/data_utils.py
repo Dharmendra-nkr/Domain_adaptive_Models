@@ -180,8 +180,19 @@ def prepare_tokenized_datasets(
         desc="Converting KB to token-level NER",
     )
 
-    # RoBERTa needs add_prefix_space=True for pre-tokenized inputs
-    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, add_prefix_space=True)
+    # RoBERTa/GPT-2 need add_prefix_space=True for pre-tokenized inputs
+    # DeBERTa fast tokenizer has bugs, use slow tokenizer
+    tokenizer_kwargs = {}
+    if any(name in model_name.lower() for name in ["deberta"]):
+        tokenizer_kwargs["use_fast"] = False
+        print(f"[DEBUG] Loading {model_name} with slow tokenizer (use_fast=False)")
+    else:
+        tokenizer_kwargs["use_fast"] = True
+        if any(name in model_name.lower() for name in ["roberta", "gpt"]):
+            tokenizer_kwargs["add_prefix_space"] = True
+    
+    print(f"[DEBUG] Tokenizer kwargs for {model_name}: {tokenizer_kwargs}")
+    tokenizer = AutoTokenizer.from_pretrained(model_name, **tokenizer_kwargs)
 
     label_list = get_label_list(tokenized_raw)
     label2id = {l: i for i, l in enumerate(label_list)}
