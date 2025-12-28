@@ -1,0 +1,7 @@
+model_name,precision,recall,f1,output_dir
+bert-base-uncased,0.8243169398907104,0.8689516129032258,0.8460459899046551,models/bert-base-uncased
+roberta-base,0.8492435399651894,0.8931286961419318,0.8706334500034314,models/roberta-base
+microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext,0.858725079990155,0.9094226508536426,0.8833470472814735,models\microsoft--BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext
+allenai/scibert_scivocab_uncased,0.8618919265819536,0.8934273549760511,0.8773763637551448,models\allenai--scibert_scivocab_uncased
+google/electra-base-discriminator,0.8465339739190116,0.8881048387096774,0.8668212804835196,models\google--electra-base-discriminator
+xlnet-base-cased,0.8517520215633423,0.8894814814814814,0.8702079860859482,models\xlnet-base-cased

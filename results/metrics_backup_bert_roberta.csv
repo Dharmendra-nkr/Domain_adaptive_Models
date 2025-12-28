@@ -1,0 +1,3 @@
+model_name,precision,recall,f1,output_dir
+bert-base-uncased,0.8243169398907104,0.8689516129032258,0.8460459899046551,models/bert-base-uncased
+roberta-base,0.8492435399651894,0.8931286961419318,0.8706334500034314,models/roberta-base
